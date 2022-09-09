@@ -38,7 +38,8 @@ jobs:
         with:
           distribution: 'adopt'
           java-version: '8'
-      - 
+      - name: Build with Gradle
+        run: ./gradlew build
       - name: Analyze Test and/or Coverage Results
         if: always()
         uses: runforesight/foresight-test-kit-action@v1
